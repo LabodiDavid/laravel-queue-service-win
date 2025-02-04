@@ -21,8 +21,7 @@
 	├── Uninstall-Queue-Worker-Service.ps1     # Service removal script
 	├── queue-worker.ps1          # Worker process wrapper, this is what the service run
 	└── /storage/logs/             # Laravel logs (auto-used)
-	    └── queue-worker.txt      # Real-time logging by worker wrapper
-	    ├── queue-worker.log # Real-time logging by worker wrapper
+		├── queue-worker.txt      # Real-time logging by worker wrapper
 		├── queue-service.log # Service output logs (auto-created, handled by NSSM)  
 		└── queue-service-error.log # Service error logs (auto-created, handled by NSSM)
 ```
@@ -35,10 +34,9 @@ git clone https://github.com/labodidavid/laravel-queue-service-win.git
 2. **Place scripts** in your Laravel root directory
 3. **Run as Administrator**:
 ```powershell
-# Install service
 .\Install-Queue-Worker-Service.ps1
 ```
-4. **In development environments:** Add `/nssm` directory or the scripts to `.gitignore` 
+4. **In development environments:** Add `/nssm` directory and the scripts to `.gitignore` 
 
 **Uninstall** when needed:
 ```powershell
